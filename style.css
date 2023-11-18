@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #007bff, #00bfff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease-in-out;
+}
+
+.container {
+    background-color: rgba(151, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+h1 {
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+.input-container,
+.output-container {
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    color: #007bff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #1d05fa;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #00bfff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bfff;
+}
+
+button:hover {
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease-in-out;
+    overflow: hidden; /* Prevent default browser scrollbar */
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Ensure the video stays behind other elements */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    z-index: 1; /* Ensure the container stays above the video */
+}
